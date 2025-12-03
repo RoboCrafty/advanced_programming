@@ -8,8 +8,28 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add include directory
 include_directories(include)
 
+# Find Eigen3
+find_package (Eigen3 REQUIRED NO_MODULE)
+
 # Add your sources
 add_executable(caseTracker.out
     src/caseTrack.cpp
     src/helper.cpp
 )
+
+add_executable(eigenPractice.out
+    src/eigenPractice.cpp
+)
+
+add_executable(sleep.out
+    src/testSleep.cpp
+)
+
+
+add_executable(wk6_1.out
+    src/wk6_1/main.cpp
+    src/wk6_1/person.cpp
+
+)
+
+target_link_libraries(eigenPractice.out Eigen3::Eigen)
