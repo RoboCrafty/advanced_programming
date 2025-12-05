@@ -32,4 +32,11 @@ add_executable(wk6_1.out
 
 )
 
+add_executable(threads.out
+    src/tryinCoolShit/threads.cpp
+)
+
+add_executable(threads2.out
+    src/tryinCoolShit/threads2.cpp
+)
 target_link_libraries(eigenPractice.out Eigen3::Eigen)

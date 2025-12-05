@@ -11,7 +11,7 @@ private:
   std::vector<Course> courses;
 public: 
   Student();
-  void 
+  void print() const;
 };
 
 #endif // STUDENT_H
