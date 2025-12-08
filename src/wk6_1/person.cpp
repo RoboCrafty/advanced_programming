@@ -4,7 +4,7 @@
 // location array and creates a unique_id for the
 // object.
 Person::Person(std::array<double, 2> loc)
- : curr_location{loc}, _id{counter++}
+ : curr_location{loc}, _id{counter++}, status(Status::Healthy)
 {
 }
 // 2. TODO: Implement the copy constructor
@@ -14,11 +14,12 @@ Person::Person(const Person& other)
 { 
 }
 
+
 // 3. TODO: Implement the copy assignment operator.
 
 Person &Person::operator=(Person const &other) {
   status = other.status;
-  curr_location = other.curr_location;
+  curr_location = other.curr_location ;
   return *this;
 }
 
